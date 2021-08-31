@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,17 +14,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHP-dh-T1H">
-                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Jx-wh-xk4" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="768"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Smart Scanner" textAlignment="natural" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="FPv-Ym-5f1">
-                                                <rect key="frame" x="20" y="30" width="202" height="40"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Scanner" textAlignment="natural" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="FPv-Ym-5f1">
+                                                <rect key="frame" x="20" y="30" width="114" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="8bd-ns-Oyc"/>
                                                 </constraints>
@@ -32,21 +32,21 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTw-v9-ifL">
-                                                <rect key="frame" x="20" y="78" width="335" height="440"/>
+                                                <rect key="frame" x="20" y="78" width="374" height="460"/>
                                                 <viewLayoutGuide key="safeArea" id="ncJ-y2-bXv"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="440" id="iJK-KG-hob"/>
+                                                    <constraint firstAttribute="height" constant="460" id="iJK-KG-hob"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqb-IJ-p98">
-                                                <rect key="frame" x="20" y="538" width="335" height="24"/>
+                                                <rect key="frame" x="20" y="558" width="374" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg4-ON-33l" userLabel="Label Result">
-                                                <rect key="frame" x="20" y="570" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="590" width="374" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="XnJ-ml-hg8"/>
                                                 </constraints>
@@ -55,7 +55,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exc-zS-gVX" userLabel="Divider View">
-                                                <rect key="frame" x="20" y="644" width="335" height="0.66666666666662877"/>
+                                                <rect key="frame" x="20" y="664" width="374" height="0.66666666666662877"/>
                                                 <viewLayoutGuide key="safeArea" id="pl1-TA-JQ1"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -63,7 +63,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fR-ZE-Xjv">
-                                                <rect key="frame" x="20" y="681.33333333333337" width="120" height="40"/>
+                                                <rect key="frame" x="20" y="701.33333333333337" width="120" height="40"/>
                                                 <color key="backgroundColor" systemColor="linkColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="3uN-qs-gqx"/>
@@ -76,18 +76,18 @@
                                                     <action selector="copyResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K7b-X3-HYI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-bE-k2v">
-                                                <rect key="frame" x="235" y="681.33333333333337" width="120" height="40"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-bE-k2v" userLabel="Continue Button">
+                                                <rect key="frame" x="274" y="701.33333333333337" width="120" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="hYg-JI-TVe"/>
                                                     <constraint firstAttribute="width" constant="120" id="kHh-Qg-q1V"/>
                                                 </constraints>
-                                                <state key="normal" title="Clear">
+                                                <state key="normal" title="Continue">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="clearResultLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNa-56-9wg"/>
+                                                    <action selector="continueScanning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNa-56-9wg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -95,7 +95,6 @@
                                         <constraints>
                                             <constraint firstItem="zg4-ON-33l" firstAttribute="leading" secondItem="4Jx-wh-xk4" secondAttribute="leading" constant="20" symbolic="YES" id="4tT-p4-wDY"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1fR-ZE-Xjv" secondAttribute="bottom" constant="30" id="7iD-Zx-EbW"/>
-                                            <constraint firstItem="eTw-v9-ifL" firstAttribute="leading" secondItem="4Jx-wh-xk4" secondAttribute="leading" constant="20" id="9Z9-fE-ckp"/>
                                             <constraint firstItem="eTw-v9-ifL" firstAttribute="top" secondItem="FPv-Ym-5f1" secondAttribute="bottom" constant="8" id="C4z-kk-Bsb"/>
                                             <constraint firstItem="Qqb-IJ-p98" firstAttribute="top" secondItem="eTw-v9-ifL" secondAttribute="bottom" constant="20" id="Drm-iN-9Yh"/>
                                             <constraint firstItem="zg4-ON-33l" firstAttribute="top" secondItem="Qqb-IJ-p98" secondAttribute="bottom" constant="8" symbolic="YES" id="EpU-p7-HD1"/>
@@ -104,8 +103,9 @@
                                             <constraint firstItem="1fR-ZE-Xjv" firstAttribute="top" secondItem="exc-zS-gVX" secondAttribute="bottom" constant="36.670000000000002" id="Ti7-A4-gfW"/>
                                             <constraint firstItem="FAX-bE-k2v" firstAttribute="top" secondItem="exc-zS-gVX" secondAttribute="bottom" constant="36.670000000000002" id="V9o-5n-xO8"/>
                                             <constraint firstItem="FPv-Ym-5f1" firstAttribute="leading" secondItem="4Jx-wh-xk4" secondAttribute="leading" constant="20" id="WXb-aY-h0p"/>
+                                            <constraint firstAttribute="trailing" secondItem="eTw-v9-ifL" secondAttribute="trailing" constant="20" symbolic="YES" id="aiY-a9-A7a"/>
                                             <constraint firstItem="exc-zS-gVX" firstAttribute="top" secondItem="zg4-ON-33l" secondAttribute="bottom" constant="24" id="cRQ-rK-X9q"/>
-                                            <constraint firstAttribute="trailing" secondItem="eTw-v9-ifL" secondAttribute="trailing" constant="20" id="g6c-0x-ZE3"/>
+                                            <constraint firstItem="eTw-v9-ifL" firstAttribute="leading" secondItem="4Jx-wh-xk4" secondAttribute="leading" constant="20" symbolic="YES" id="gCc-by-1Dj"/>
                                             <constraint firstItem="1fR-ZE-Xjv" firstAttribute="leading" secondItem="4Jx-wh-xk4" secondAttribute="leading" constant="20" symbolic="YES" id="iha-GR-ssV"/>
                                             <constraint firstAttribute="trailing" secondItem="Qqb-IJ-p98" secondAttribute="trailing" constant="20" id="k8P-vj-31N"/>
                                             <constraint firstItem="Qqb-IJ-p98" firstAttribute="leading" secondItem="4Jx-wh-xk4" secondAttribute="leading" constant="20" id="kyx-Ad-Rkj"/>
@@ -140,7 +140,7 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="clearButton" destination="FAX-bE-k2v" id="sKK-Eb-MUe"/>
+                        <outlet property="continueButton" destination="FAX-bE-k2v" id="sKK-Eb-MUe"/>
                         <outlet property="copyButton" destination="1fR-ZE-Xjv" id="xsf-Zi-gcM"/>
                         <outlet property="labelResult" destination="zg4-ON-33l" id="w0G-wb-S3Z"/>
                         <outlet property="myViewScanner" destination="eTw-v9-ifL" id="gE1-dq-edX"/>
@@ -158,8 +158,8 @@
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

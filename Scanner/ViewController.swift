@@ -21,27 +21,35 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 	@IBOutlet weak var myViewScanner: UIView!
 	@IBOutlet weak var labelResult: UILabel!
 	@IBOutlet weak var copyButton: UIButton!
-	@IBOutlet weak var clearButton: UIButton!
+	@IBOutlet weak var continueButton: UIButton!
 	
 	// MARK: Actions
 	@IBAction func copyResult(_ sender: Any) {
 		pasteboard.string = labelResult.text
-		labelResult.text = String()
 		
-		if (captureSession?.isRunning == false) {
-			captureSession.startRunning()
-		}
+		UIView.transition(with: view, duration: 0.4, options: .transitionCrossDissolve, animations:
+							{
+								let alert = UIAlertController(title: "Scanner", message: "The scanner result was copied to the clipboard.", preferredStyle: .alert)
+								alert.addAction(UIAlertAction(title: "OK", style: .default))
+								self.present(alert, animated: true)
+								
+							}, completion: nil)
 	}
 	
-	@IBAction func clearResultLabel(_ sender: Any) {
-		labelResult.text = String()
-		
-		if (captureSession?.isRunning == false) {
-			captureSession.startRunning()
-		}
-		
-		disableButtons()
+	@IBAction func continueScanning(_ sender: Any) {
+		UIView.transition(with: view, duration: 0.4, options: .transitionCrossDissolve, animations:
+							{
+								self.labelResult.text = String()
+								self.disableButtons()
+								
+							}, completion: {_ in
+								
+								if (self.captureSession?.isRunning == false) {
+									self.captureSession.startRunning()
+								}
+							})
 	}
+	
 	
 	// MARK: Variables
 	var pasteboard = UIPasteboard.general
@@ -55,7 +63,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 		
 		captureSession = AVCaptureSession()
 		
-		// Find the default audio device.
+		// Find the default video device.
 		guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else {
 			return
 		}
@@ -81,7 +89,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 			captureSession.addOutput(metadataOutput)
 			
 			metadataOutput.setMetadataObjectsDelegate(self, queue: .main)
-			metadataOutput.metadataObjectTypes = [.qr, .code39]
+			metadataOutput.metadataObjectTypes = [.qr, .code128, .code39, .code93, .code39Mod43, .dataMatrix, .ean13, .ean8, .itf14, .pdf417]
 		} else {
 			failed()
 			return
@@ -102,7 +110,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 		
 		disableButtons()
 		copyButton.layer.cornerRadius = 20
-		clearButton.layer.cornerRadius = 20
+		continueButton.layer.cornerRadius = 20
 	}
 	
 	func failed() {
@@ -141,18 +149,18 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 	
 	func enableButtons() {
 		copyButton.isEnabled = true
-		clearButton.isEnabled = true
+		continueButton.isEnabled = true
 		
 		copyButton.alpha = 1
-		clearButton.alpha = 1
+		continueButton.alpha = 1
 	}
 	
 	func disableButtons() {
 		copyButton.isEnabled = false
-		clearButton.isEnabled = false
+		continueButton.isEnabled = false
 		
 		copyButton.alpha = 0.5
-		clearButton.alpha = 0.5
+		continueButton.alpha = 0.5
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
