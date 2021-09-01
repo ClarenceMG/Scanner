@@ -90,16 +90,28 @@
                                                     <action selector="continueScanning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNa-56-9wg"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQo-Fp-y5L">
+                                                <rect key="frame" x="370.33333333333331" y="32" width="23.666666666666686" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="shareText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucG-ke-QBe"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" name="ScannerBackground"/>
                                         <constraints>
                                             <constraint firstItem="zg4-ON-33l" firstAttribute="leading" secondItem="4Jx-wh-xk4" secondAttribute="leading" constant="20" symbolic="YES" id="4tT-p4-wDY"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1fR-ZE-Xjv" secondAttribute="bottom" constant="30" id="7iD-Zx-EbW"/>
+                                            <constraint firstAttribute="trailing" secondItem="WQo-Fp-y5L" secondAttribute="trailing" constant="20" symbolic="YES" id="BA7-u2-5Gu"/>
                                             <constraint firstItem="eTw-v9-ifL" firstAttribute="top" secondItem="FPv-Ym-5f1" secondAttribute="bottom" constant="8" id="C4z-kk-Bsb"/>
                                             <constraint firstItem="Qqb-IJ-p98" firstAttribute="top" secondItem="eTw-v9-ifL" secondAttribute="bottom" constant="20" id="Drm-iN-9Yh"/>
                                             <constraint firstItem="zg4-ON-33l" firstAttribute="top" secondItem="Qqb-IJ-p98" secondAttribute="bottom" constant="8" symbolic="YES" id="EpU-p7-HD1"/>
                                             <constraint firstItem="FPv-Ym-5f1" firstAttribute="top" secondItem="4Jx-wh-xk4" secondAttribute="top" constant="30" id="FpR-Cz-6d0"/>
                                             <constraint firstAttribute="trailing" secondItem="zg4-ON-33l" secondAttribute="trailing" constant="20" symbolic="YES" id="J6v-8C-YVO"/>
+                                            <constraint firstItem="WQo-Fp-y5L" firstAttribute="centerY" secondItem="FPv-Ym-5f1" secondAttribute="centerY" id="MQ2-UP-RZk"/>
                                             <constraint firstItem="1fR-ZE-Xjv" firstAttribute="top" secondItem="exc-zS-gVX" secondAttribute="bottom" constant="36.670000000000002" id="Ti7-A4-gfW"/>
                                             <constraint firstItem="FAX-bE-k2v" firstAttribute="top" secondItem="exc-zS-gVX" secondAttribute="bottom" constant="36.670000000000002" id="V9o-5n-xO8"/>
                                             <constraint firstItem="FPv-Ym-5f1" firstAttribute="leading" secondItem="4Jx-wh-xk4" secondAttribute="leading" constant="20" id="WXb-aY-h0p"/>
@@ -144,6 +156,7 @@
                         <outlet property="copyButton" destination="1fR-ZE-Xjv" id="xsf-Zi-gcM"/>
                         <outlet property="labelResult" destination="zg4-ON-33l" id="w0G-wb-S3Z"/>
                         <outlet property="myViewScanner" destination="eTw-v9-ifL" id="gE1-dq-edX"/>
+                        <outlet property="shareButton" destination="WQo-Fp-y5L" id="3gE-Ac-wc3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -152,6 +165,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="ScannerBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
