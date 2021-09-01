@@ -22,6 +22,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 	@IBOutlet weak var labelResult: UILabel!
 	@IBOutlet weak var copyButton: UIButton!
 	@IBOutlet weak var continueButton: UIButton!
+	@IBOutlet weak var shareButton: UIButton!
 	
 	// MARK: Actions
 	@IBAction func copyResult(_ sender: Any) {
@@ -30,7 +31,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 		UIView.transition(with: view, duration: 0.4, options: .transitionCrossDissolve, animations:
 							{
 								let alert = UIAlertController(title: "Scanner", message: "The scanner result was copied to the clipboard.", preferredStyle: .alert)
-								alert.addAction(UIAlertAction(title: "OK", style: .default))
+								alert.addAction(UIAlertAction(title: "Ok", style: .default))
 								self.present(alert, animated: true)
 								
 							}, completion: nil)
@@ -48,6 +49,12 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 									self.captureSession.startRunning()
 								}
 							})
+	}
+	
+	@IBAction func shareText(_ sender: Any) {
+		
+		let activityController = UIActivityViewController(activityItems: ["\(labelResult.text ?? "") \nShared from Scanner."], applicationActivities: nil)
+		present(activityController, animated: true, completion: nil)
 	}
 	
 	
@@ -150,17 +157,21 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 	func enableButtons() {
 		copyButton.isEnabled = true
 		continueButton.isEnabled = true
+		shareButton.isEnabled = true
 		
 		copyButton.alpha = 1
 		continueButton.alpha = 1
+		shareButton.alpha = 1
 	}
 	
 	func disableButtons() {
 		copyButton.isEnabled = false
 		continueButton.isEnabled = false
+		shareButton.isEnabled = false
 		
 		copyButton.alpha = 0.5
 		continueButton.alpha = 0.5
+		shareButton.alpha = 0.5
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
