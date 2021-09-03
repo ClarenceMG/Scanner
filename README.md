@@ -15,14 +15,22 @@ The main functionality of the app is to scan some of the most popular codes:
 
 Here are some screenshots of the application.
 
+<p></p>
 <p><b>Home screen in light mode</b></p>
 <kbd><img width="350" src=".github/screenshots/scanner-light-mode.jpeg"/></kbd>
 
+<p></p>
 <p><b>Home screen in dark mode</b></p>
 <kbd><img width="350" src=".github/screenshots/scanner-home-screen.jpeg"/></kbd>
 
+<p></p>
 <p><b>Scanning a QR code</b></p>
 <kbd><img width="350" src=".github/screenshots/scanning-qr.jpeg"/></kbd>
 
+<p></p>
 <p><b>Copying the result</b></p>
 <kbd><img width="350" src=".github/screenshots/scanner-copy-action.jpeg"/></kbd>
+
+<p></p>
+<p><b>The app has the option to share the scan result</b></p>
+<kbd><img width="350" src=".github/screenshots/scanner-share-option.jpeg"/></kbd>
